@@ -52,6 +52,5 @@ export default {
   max-width: 800px;
   width: 40vw;
   min-width: 300px;
-  background-color: #fc4a1a;
 }
 </style>

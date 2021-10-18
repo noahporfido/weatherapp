@@ -1,15 +1,24 @@
 <template>
   <div id="app">
-    <loader v-show="$store.state.loaderState" class="loader"></loader>
+    <notification-header :expand="getShowHeader"></notification-header>
+    <loader v-if="getLoaderState" class="loader"></loader>
     <router-view />
   </div>
 </template>
 
 <script>
-import { Loader } from "@/components";
+import { Loader, NotificationHeader } from "@/components";
 
 export default {
-  components: { Loader },
+  components: { Loader, NotificationHeader },
+  computed: {
+    getShowHeader() {
+      return this.$store.state.user.showHeader;
+    },
+    getLoaderState() {
+      return this.$store.state.user.loaderState;
+    },
+  },
 };
 </script>
 

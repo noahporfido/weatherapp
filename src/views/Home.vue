@@ -3,13 +3,13 @@
     <h1>Get to know your weather like your left pocket</h1>
     <div class="content-container">
       <div class="control-container">
-        <p>Insert your the zip code from your city of choice</p>
+        <p>Insert the zip code from your city of choice</p>
         <input-field
           @input="setZipCode($event)"
-          placeholder="Plz"
+          placeholder="PLZ"
         ></input-field>
         <button class="btn" @click="getWeatherWithZipCode(zipCode)">
-          Get weather
+          get weather
         </button>
         <!-- {{ getweatherToday }} -->
       </div>

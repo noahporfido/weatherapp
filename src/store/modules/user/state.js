@@ -1,3 +1,3 @@
-const loaderState = false
+const user =  () => ({loaderState: false,showHeader: false}) 
 
-export default {loaderState}
+export default user
