@@ -1,3 +1,3 @@
-const weatherToday = {}
+const weather = () => ({weatherToday: {}})
 
-export default {weatherToday}
+export default weather

@@ -11,7 +11,6 @@
         <button class="btn" @click="getWeatherWithZipCode(zipCode)">
           get weather
         </button>
-        <!-- {{ getweatherToday }} -->
       </div>
       <weather-card
         v-if="getWeatherToday"
