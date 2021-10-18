@@ -6,6 +6,8 @@
       :placeholder="placeholder"
       id="inputField"
       :required="required"
+      v-model="data"
+      @change="$emit('input', data)"
     />
     <label for="inputField" class="form__label">{{ placeholder }}</label>
   </div>
@@ -29,7 +31,13 @@ export default {
     },
     required: {
       type: Boolean,
+      default: false,
     },
+  },
+  data() {
+    return {
+      data: null,
+    };
   },
 };
 </script>

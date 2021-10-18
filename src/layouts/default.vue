@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="defaultLayout-container">
     <router-view />
   </div>
 </template>
@@ -8,4 +8,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+.defaultLayout-container {
+  padding: 20px 4%;
+}
 </style>

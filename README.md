@@ -1,4 +1,4 @@
-# wheaterapp
+# weatherapp
 
 ## Project setup
 ```
