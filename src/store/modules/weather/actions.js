@@ -1,16 +1,16 @@
 import weatherService from '@/services/weatherService' 
 
     
-   const getweatherWithZipCode =  async ({commit},zipCode) => {
+   const getWeatherWithZipCode = ({commit},zipCode) => {
 
     commit('TOGGLE_LOADING', true, { root: true })
-    const weatherData = await weatherService.getWheatherWithCode(zipCode).catch(err => console.log(err));
 
-    commit("SET_WEATHER_TODAY", weatherData)
+    weatherService.getWheatherWithCode(zipCode).then((weatherData) => commit("SET_WEATHER_TODAY", weatherData)).catch(err => console.log(err));
+
     commit('TOGGLE_LOADING', false, { root: true })
 } 
 
 
 export {
-    getweatherWithZipCode
+    getWeatherWithZipCode
 }

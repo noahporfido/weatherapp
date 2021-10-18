@@ -1,25 +1,35 @@
 <template>
   <div class="home-container">
     <h1>Get to know your weather like your left pocket</h1>
-    <div class="control-container">
-      <p>Insert your the zip code from your city of choice</p>
-      <input-field @input="setZipCode($event)" placeholder="Plz"></input-field>
-      <button class="btn" @click="getweatherWithZipCode(zipCode)">
-        Get weather
-      </button>
-      <!-- {{ getweatherToday }} -->
+    <div class="content-container">
+      <div class="control-container">
+        <p>Insert your the zip code from your city of choice</p>
+        <input-field
+          @input="setZipCode($event)"
+          placeholder="Plz"
+        ></input-field>
+        <button class="btn" @click="getWeatherWithZipCode(zipCode)">
+          Get weather
+        </button>
+        <!-- {{ getweatherToday }} -->
+      </div>
+      <weather-card
+        v-if="getWeatherToday"
+        :cardData="getWeatherToday"
+      ></weather-card>
     </div>
   </div>
 </template>
 
 <script>
-import inputField from "@/components/InputField.vue";
+import { InputField, WeatherCard } from "@/components";
 import { mapActions, mapGetters } from "vuex";
 
 export default {
   name: "Home",
   components: {
-    inputField,
+    InputField,
+    WeatherCard,
   },
   data() {
     return {
@@ -27,20 +37,25 @@ export default {
     };
   },
   methods: {
-    ...mapActions(["getweatherWithZipCode"]),
+    ...mapActions(["getWeatherWithZipCode"]),
     setZipCode(data) {
       this.zipCode = data;
     },
   },
-  computed: { ...mapGetters(["getweatherToday"]) },
+  computed: { ...mapGetters(["getWeatherToday"]) },
 };
 </script>
 
 <style lang="scss" scoped>
 .home-container {
-  .control-container {
-    max-width: 300px;
-    width: 80%;
+  .content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .control-container {
+      max-width: 300px;
+      width: 80%;
+    }
   }
 }
 </style>
