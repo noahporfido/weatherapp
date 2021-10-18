@@ -31,9 +31,11 @@ export default {
   },
   methods: {
     getDate(dateString) {
-      var date = new Date(dateString * 1000);
+      const date = new Date(dateString * 1000);
 
-      return `${date.getHours()} : ${date.getMinutes()}`;
+      return `${
+        date.getHours().toString().length > 1 ? "" : "0"
+      }${date.getHours()} : ${date.getMinutes()}`;
     },
   },
   computed: {
