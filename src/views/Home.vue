@@ -3,7 +3,7 @@
     <h1>Get to know your weather like your left pocket</h1>
     <div class="content-container">
       <div class="control-container">
-        <p>Insert the zip code from your city of choice</p>
+        <h3>Insert the zip code from your city of choice</h3>
         <input-field
           @input="setZipCode($event)"
           placeholder="PLZ"
