@@ -4,18 +4,22 @@
       <p>City</p>
       <h2>{{ cardData.location }}</h2>
     </div>
+    <hr />
     <div class="info-container">
       <p>Temperature</p>
       <h2>{{ getTempRounded }}°</h2>
     </div>
+    <hr />
     <div class="info-container">
       <p>Pressure</p>
       <h2>{{ cardData.pressure }} hPa</h2>
     </div>
+    <hr />
     <div class="info-container">
       <p>Sunset</p>
       <h2>{{ getDate(cardData.sunset) }}</h2>
     </div>
+    <hr />
     <div class="info-container">
       <p>Sunrise</p>
       <h2>{{ getDate(cardData.sunrise) }}</h2>
