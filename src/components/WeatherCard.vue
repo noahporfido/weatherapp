@@ -35,8 +35,10 @@ export default {
   },
   methods: {
     getDate(dateString) {
+      //multiply by 1000 for milliseconds
       const date = new Date(dateString * 1000);
 
+      //check if 0 must be added infront of time
       return `${
         date.getHours().toString().length > 1 ? "" : "0"
       }${date.getHours()} : ${date.getMinutes()}`;
