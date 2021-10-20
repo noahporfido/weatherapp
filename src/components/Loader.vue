@@ -1,4 +1,4 @@
-<!--- copied --->
+//copied
 <template>
   <div class="lds-roller">
     <div></div>
