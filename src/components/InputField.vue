@@ -1,3 +1,4 @@
+//styles copied from codepen.io
 <template>
   <div class="form__group field">
     <input
