@@ -3,6 +3,8 @@
 ## Project setup
 ```
 yarn install
+change env.example to env.local
+add values inside env.local
 ```
 
 ### Compiles and hot-reloads for development
