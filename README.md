@@ -2,14 +2,18 @@
 
 ## Project setup
 ```
-yarn install
-change env.example to env.local
-add values inside env.local
+npm install
+change env.example to .env.local
+
+add for VUE_APP_API_TOKEN the secret token from openapi weather
+add for VUE_APP_BACKEND_API http://api.openweathermap.org/data/2.5/weather
 ```
 
 ### Compiles and hot-reloads for development
 ```
-yarn serve
+npm run serve
+
+open localhost
 ```
 
 ### Compiles and minifies for production
