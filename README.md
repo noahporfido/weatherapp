@@ -2,7 +2,11 @@
 
 ## Project setup
 ```
+
+install node js
+
 npm install
+
 change env.example to .env.local
 
 add for VUE_APP_API_TOKEN the secret token from openapi weather
