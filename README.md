@@ -12,8 +12,6 @@ add for VUE_APP_BACKEND_API http://api.openweathermap.org/data/2.5/weather
 ### Compiles and hot-reloads for development
 ```
 npm run serve
-
-open localhost
 ```
 
 ### Compiles and minifies for production
